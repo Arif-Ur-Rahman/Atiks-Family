@@ -7,16 +7,16 @@ class FamilyMember {
 }
 
 const family = [
-    new FamilyMember('Father', 'Mr. XYZ', 'He is the head of the family.'),
-    new FamilyMember('Mother', 'Mrs. ABC', 'She is the heart of the family.'),
-    new FamilyMember('Brother', 'Faruk', 'He is married.'),
-    new FamilyMember('Brother', 'Arif', 'He is going to be married soon.'),
-    new FamilyMember('Brother', 'Atik', 'He is a student of IUBAT CSE dept.')
+    new FamilyMember('Father', 'Mr.Abdul Matin Mazumdar', 'He is the head of the family.'),
+    new FamilyMember('Mother', 'Mrs. Mafia Begum', 'She is the heart of the family.'),
+    new FamilyMember('Brother', 'Faruk Mazumdar', 'He is married.'),
+    new FamilyMember('Brother', 'Arif Mazumdar', 'He is going to be married soon.'),
+    new FamilyMember('Brother', 'Atik Mazumdar', 'He is a student of IUBAT CSE dept.')
 ];
 
 function displayFamily(familyList) {
     const familyContainer = document.getElementById('familyContainer');
-    familyContainer.innerHTML = ''; // Clear existing content
+    familyContainer.innerHTML = ''; 
     familyList.forEach(member => {
         const memberDiv = document.createElement('div');
         memberDiv.className = 'family-member';
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const addMemberForm = document.getElementById('addMemberForm');
     addMemberForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form from submitting normally
+        event.preventDefault(); 
 
         const role = document.getElementById('role').value;
         const name = document.getElementById('name').value;
@@ -50,6 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
         family.push(newMember);
         displayFamily(family);
 
-        addMemberForm.reset(); // Reset the form fields
+        addMemberForm.reset(); 
     });
 });
